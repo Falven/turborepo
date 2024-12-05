@@ -4,14 +4,16 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "cross-env NODE_OPTIONS='--inspect 9229' next dev",
+    "check-types": "tsc --noEmit",
     "build": "next build",
+    "clean": "rm -rf .next",
     "start": "next start",
-    "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "lint": "next lint --max-warnings 0"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
+    "@repo/lib": "workspace:*",
     "next": "15.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

@@ -1,0 +1,36 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "2.0.0",
+  "compounds": [
+    {
+      "name": "Next.js: attach full-stack",
+      "configurations": [
+        "Next.js: debug client-side",
+        "Next.js: attach server-side"
+      ],
+      "stopAll": true
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Next.js: debug server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm run dev"
+    },
+    {
+      "name": "Next.js: debug client-side",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:3000",
+    },
+    {
+      "name": "Next.js: attach server-side",
+      "type": "node",
+      "request": "attach",
+      "port": 9230,
+    }
+  ]
+}
